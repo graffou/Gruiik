@@ -1,0 +1,20 @@
+tar -cvf gruiik.tar maketar
+tar -h -uvf gruiik.tar *.cpp 
+tar -h -uvf gruiik.tar *.h
+tar -h -uvf gruiik.tar fonts/* 
+gzip gruiik.tar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
