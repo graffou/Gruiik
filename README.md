@@ -6,6 +6,9 @@ Gruiik is a attempt at building a simple C++11 graphic toolkit for embedded syst
 It surely lacks of optimization and is still a bit messy :)
 
 Thanks to Gábor Kiss-Vámosi for the littlevgl environment.
+Thanks to Jardel Weyrich for the calculator software.
+I had to modify it for floating point calculation, the original code should be found here:
+https://gist.github.com/jweyrich/4bd1d4556069f3d49d73
 
 To build the stm32F746discovery demo:
 -------------------------------------
