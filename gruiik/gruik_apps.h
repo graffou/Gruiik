@@ -17,7 +17,7 @@ GKMODULE(kb_app_t)
 
 	void layout()
 	{
-		term2.caption.font_div = 2;
+		term2.caption.font_div = 1;
 		split<VERT>(15, EXIT_, term2);
 
 		term2.split<VERT>(128, term2, kb0);

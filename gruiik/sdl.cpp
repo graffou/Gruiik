@@ -35,8 +35,8 @@
 #include "gruik_components.h"
 #include "gruik_static.h"
 
-//#include "gruik_tp.cpp"
-#include "gruik_nana.cpp"
+#include "gruik_tp.cpp"
+//#include "gruik_nana.cpp"
 
 
 #define SDL_REFR_PERIOD	    100	/*ms*/
@@ -218,16 +218,16 @@ int main()
 		usleep(100);
 		gruik_obj::input_process(last_x,last_y,left_button_down);
 		char toto[100];
-		sprintf(toto, "Bienvenue sur le PC de Nana\n");
+		sprintf(toto, "Counter = %d\n", zz);
 		zz++;
 		char titi[2];
 		//titi[0] = 65 + (zz&0x1f);titi[1] = '\0';
-		titi[0] = 65 + (gktop.term.get_read_line_rows());titi[1] = '\0';
+		//titi[0] = 65 + (gktop.term.get_read_line_rows());titi[1] = '\0';
 		//gprintf("#R  %   z %B     ", gktop.term.get_read_line_rows(), zz&0x1FF);
 		if (gktop.btn3.toggle_value)
-#if 0		
+#if 1		
 		if (((zz & 0x1ff) == 0x0)) gktop.term.print_line(toto);
-			else if ( (zz&0x3) == 0) gktop.term.print_line(titi);
+			//else if ( (zz&0x3) == 0) gktop.term.print_line(titi);
 #else			
 		if (((zz & 0x1ff) == 0x0)) gktop.calc_app.term2.print_line(toto);
 			else if ( (zz&0x3) == 0) gktop.calc_app.term2.print_line(titi);
@@ -242,7 +242,7 @@ int main()
 			for (int i = 0; i < 16384; i++)
 				//signal2.set_data(ADDRESSED | i, i&255);
 				signal2.set_data(ADDRESSED | i, 
-				uint32_t(((16384-i)*sin(double(i)*6.28/10*(1-double(i)/20000))*sin(double(i)/160))>0)*256);
+				uint32_t(((16384-i)*sin(double(i)*6.28/10*(1-double(i)/20000))*sin(double(i)/160))));
 			signal2.set_event(0); // launch draw	
 		}
 //		for (int i = 0; i < 480*272;i++)

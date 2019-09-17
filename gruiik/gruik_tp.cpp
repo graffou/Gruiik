@@ -7,7 +7,7 @@ GKMODULE(top_bar_t)
 	MODULE_INST(menu1, gk_menu);
 	MODULE_INST(go_term, gk_menu_entry);
 	MODULE_INST(go_curve, gk_menu_entry);
-	MODULE_INST(go_fuck_yourself, gk_menu_entry);
+	MODULE_INST(go_nowhere, gk_menu_entry);
 	MODULE_INST(quit, gk_menu_entry);
 	MODULE_INST(keyboard, gk_menu_entry);
 	MODULE_INST(calc, gk_menu_entry);
@@ -19,7 +19,7 @@ GKMODULE(top_bar_t)
 		powered_by_GruiiK.caption.set_font_div(1);
 		menu0.add_entry(go_term);
 		menu0.add_entry(go_curve);
-		menu0.add_entry(go_fuck_yourself);
+		menu0.add_entry(go_nowhere);
 		menu0.add_entry(quit);	
 		menu1.add_entry(keyboard);
 		menu1.add_entry(calc);
@@ -206,13 +206,13 @@ GKMODULE(top_if_t)
 		SET_CALLBACK(top_bar.quit, top_if_t, quit);
 		SET_CALLBACK(top_bar.go_term, top_if_t, go_term);
 		SET_CALLBACK(top_bar.go_curve, top_if_t, go_curve);
-		SET_CALLBACK(top_bar.go_fuck_yourself, top_if_t, go_fuck_yourself);
+		SET_CALLBACK(top_bar.go_nowhere, top_if_t, go_nowhere);
 		SET_CALLBACK(top_bar.keyboard, top_if_t, keyboard);
 		SET_CALLBACK(top_bar.calc, top_if_t, calc);
 		//erm.caption.force_upper = 1;
 		//term.set_font_div(1);
-		term.print_line("Allez tous vous faire enculer ! Bande de gros bataaaaaaaaaards \n");
-		term.print_line("Bande de gros batards !\n");
+		term.print_line("Gruiik is a simple C++ graphic toolkit for embedded devices\n");
+		term.print_line("Enjoy!\n");
 		calc_app.term2.print_line("GRUIK CALC v0.0\n");
 	}
 
@@ -243,7 +243,7 @@ GKMODULE(top_if_t)
 		term.draw(0);	
 	}   
 	
-	void go_fuck_yourself()
+	void go_nowhere()
 	{
 		gprintf("text view\n");
 		curve.set_inactive();

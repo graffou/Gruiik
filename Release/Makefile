@@ -3,7 +3,7 @@
 ######################################################################################
 #GCC_BASE = E:/Toolchains/GNU_GCC_ARM/4.7/
 #GCC_BIN  = $(GCC_BASE)bin/
-GCC_BASE = ~/.platformio/packages/toolchain-gccarmnoneeabi/
+GCC_BASE = ~/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.16.0.201807130628/tools/compiler/
 GCC_BIN  = $(GCC_BASE)bin/
 GCC_LIB  = $(GCC_BASE)arm-none-eabi/lib/
 GCC_INC  = $(GCC_BASE)arm-none-eabi/include/
